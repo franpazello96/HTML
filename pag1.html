@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS externo</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="texto">
+        <h1>Meu conteudo</h1>
+        <form name="formcontact" id="formcontact" method="get" enctype="text/plain" action="">
+            <table class="table">
+                <tr>
+                    <td class="table">nome:</td>
+                    <td><input type="text" name="txtname" id="txtname" class="textbox"></td>
+                </tr>
+                <tr>
+                    <td class="table">email:</td>
+                    <td><input type="text" name="txtemail" id="txtemail" class="textbox"></td>
+                </tr>
+                <tr>
+                    <td class="table">mensagem:</td>
+                    <td>
+                        <textarea type="mensagem" name="mensagem" id="mensagem" class="textbox"></textarea>	
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" name="enviar" id="enviar" value="Enviar" onclick="enviarOnclick();">
+                        <input type="reset" name="limpar" id="limpar" value="limpar">
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script language="JavaScript">
+            function enviarOnclick(){
+                var name = formcontact.txtname.value;
+                if (name != ""){
+                    alert('ola!'+ name);
+                }
+            }
+
+        </script>
+    </body>
+</html>
